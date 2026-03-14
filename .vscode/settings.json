@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "/home/linuxbrew/.linuxbrew/bin/python3",
+  "python.analysis.extraPaths": [
+    "/home/linuxbrew/.linuxbrew/lib/python3.14/site-packages"
+  ],
+  "pylance.typeCheckingMode": "basic"
+}

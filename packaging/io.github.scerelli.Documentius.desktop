@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Documentius
+GenericName=PDF Signer
+Comment=Sign and annotate PDF documents
+Exec=documentius
+Icon=io.github.scerelli.Documentius
+Terminal=false
+Type=Application
+Categories=Office;Viewer;
+MimeType=application/pdf;
+Keywords=pdf;sign;signature;document;
+StartupWMClass=Documentius

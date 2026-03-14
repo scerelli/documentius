@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+*.heapsnapshot
+
+# Flatpak build artefacts
+builddir/
+repo/
+.flatpak-builder/
+packaging/flatpak/flathub-manifest.json

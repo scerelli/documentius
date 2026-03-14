@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Copyright 2024 scerelli -->
+<component type="desktop-application">
+  <id>io.github.scerelli.Documentius</id>
+
+  <name>Documentius</name>
+  <summary>Annotate and sign PDF documents</summary>
+
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+
+  <developer id="io.github.scerelli">
+    <name translate="no">scerelli</name>
+  </developer>
+
+  <description>
+    <p>
+      Documentius is a PDF annotation and signing tool for Linux.
+      Open one or more PDFs, draw freely, add shapes and text, place
+      signatures anywhere on the page, then save the result as a standard PDF.
+    </p>
+    <ul>
+      <li>Load and reorder multiple PDFs or images in a sidebar</li>
+      <li>Draw freehand, add rectangles, ellipses, lines and arrows</li>
+      <li>Place and resize text annotations directly on the page</li>
+      <li>Create signatures with the mouse or import from an image</li>
+      <li>Zoom up to 400% with GPU-assisted rendering</li>
+      <li>Full undo / redo for both annotations and page operations</li>
+      <li>Smart save: overwrites the original file or saves as a copy</li>
+      <li>Dark mode support on KDE, GNOME and other desktops</li>
+    </ul>
+  </description>
+
+  <launchable type="desktop-id">io.github.scerelli.Documentius.desktop</launchable>
+
+  <!-- Replace these with real screenshots hosted on GitHub after first release -->
+  <screenshots>
+    <screenshot type="default">
+      <caption>Annotating a PDF with shapes and text</caption>
+      <image>https://raw.githubusercontent.com/scerelli/documentius/master/data/screenshots/main.png</image>
+    </screenshot>
+    <screenshot>
+      <caption>Signature creation dialog</caption>
+      <image>https://raw.githubusercontent.com/scerelli/documentius/master/data/screenshots/signature.png</image>
+    </screenshot>
+  </screenshots>
+
+  <branding>
+    <color type="primary" scheme_preference="light">#e8eef5</color>
+    <color type="primary" scheme_preference="dark">#1a2333</color>
+  </branding>
+
+  <url type="homepage">https://github.com/scerelli/documentius</url>
+  <url type="vcs-browser">https://github.com/scerelli/documentius</url>
+  <url type="bugtracker">https://github.com/scerelli/documentius/issues</url>
+
+  <releases>
+    <release version="0.0.0-local" date="2026-03-14">
+      <description><p>Release 0.0.0-local.</p></description>
+    </release>
+    <release version="1.0.0" date="2026-03-14">
+      <description>
+        <p>Initial release.</p>
+      </description>
+    </release>
+  </releases>
+
+  <!-- Desktop-only app -->
+  <recommends>
+    <control>keyboard</control>
+    <control>pointing</control>
+  </recommends>
+  <requires>
+    <display_length compare="ge">768</display_length>
+  </requires>
+
+  <content_rating type="oars-1.1"/>
+</component>

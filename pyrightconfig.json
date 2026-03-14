@@ -1,0 +1,7 @@
+{
+  "pythonPath": "/home/linuxbrew/.linuxbrew/bin/python3",
+  "extraPaths": [
+    "/home/linuxbrew/.linuxbrew/lib/python3.14/site-packages"
+  ],
+  "typeCheckingMode": "basic"
+}

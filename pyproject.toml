@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "documentius"
+version = "0.0.0-local"
+description = "PDF annotation and signing app for Linux"
+requires-python = ">=3.10"
+license = { text = "GPL-3.0-or-later" }
+dependencies = [
+    "PySide6>=6.6",
+    "PyMuPDF>=1.23",
+    "qtawesome>=1.3",
+]
+
+[project.scripts]
+documentius = "documentius.main:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["documentius*"]
+
