@@ -11,26 +11,24 @@ GENERATED="packaging/flatpak/flathub-manifest.json"
 flatpak remote-add --if-not-exists --user flathub \
     https://dl.flathub.org/repo/flathub.flatpakrepo
 
-# ── 1. Fetch real PyPI sha256s and generate a buildable manifest ──────────────
-echo ""
-echo "==> Fetching dependency sha256s from PyPI…"
-python3 scripts/prepare_release.py scerelli/documentius --version 0.0.0-local
+flatpak install --or-update --user flathub io.qt.PySide.BaseApp//6.10 -y
 
-# prepare_release.py writes flathub-manifest.json but fills the app source
-# with COMPUTED_BY_CI — replace that stanza with type:dir for local dev
+# ── 1. Patch the template manifest: replace COMPUTED_BY_CI with type:dir ──────
+echo ""
+echo "==> Patching manifest for local build…"
 python3 - <<'EOF'
 import json, pathlib, os
 
-p = pathlib.Path("packaging/flatpak/flathub-manifest.json")
-m = json.loads(p.read_text())
+src = pathlib.Path("packaging/flatpak/io.github.scerelli.Documentius.json")
+dst = pathlib.Path("packaging/flatpak/flathub-manifest.json")
+m = json.loads(src.read_text())
 repo_root = os.path.abspath(".")
 for mod in m["modules"]:
-    for src in mod.get("sources", []):
-        if src.get("sha256") in ("COMPUTED_BY_CI", "FILLED_BY_CI") \
-                or src.get("url") in ("FILLED_BY_CI",):
+    for s in mod.get("sources", []):
+        if s.get("sha256") in ("COMPUTED_BY_CI", "FILLED_BY_CI"):
             mod["sources"] = [{"type": "dir", "path": repo_root}]
             break
-p.write_text(json.dumps(m, indent=2) + "\n")
+dst.write_text(json.dumps(m, indent=2) + "\n")
 print("  manifest patched for local build (type:dir)")
 EOF
 

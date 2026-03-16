@@ -16,7 +16,7 @@ command -v flatpak-pip-generator >/dev/null 2>&1 || {
 }
 
 flatpak-pip-generator \
-  --runtime org.kde.Sdk//6.8 \
+  --runtime org.kde.Sdk//6.10 \
   PyMuPDF PySide6 \
   --output python3-deps.json
 

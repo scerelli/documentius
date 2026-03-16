@@ -55,10 +55,7 @@
   <url type="bugtracker">https://github.com/scerelli/documentius/issues</url>
 
   <releases>
-    <release version="0.0.0-local" date="2026-03-14">
-      <description><p>Release 0.0.0-local.</p></description>
-    </release>
-    <release version="1.0.0" date="2026-03-14">
+    <release version="0.0.1" date="2026-03-14">
       <description>
         <p>Initial release.</p>
       </description>
