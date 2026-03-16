@@ -87,7 +87,7 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://github.com/scerelli/documentius/releases/download/v0.0.0-local/documentius-0.0.0-local.tar.gz",
+          "url": "https://github.com/scerelli/documentius/releases/download/v0.0.1/documentius-0.0.1.tar.gz",
           "sha256": "COMPUTED_BY_CI",
           "strip-components": 1
         }
